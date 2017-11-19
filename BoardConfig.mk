@@ -26,6 +26,10 @@ TARGET_OTA_ASSERT_DEVICE := lux,lux_uds,xt1562,xt1563
 TARGET_INIT_VENDOR_LIB := libinit_lux
 TARGET_RECOVERY_DEVICE_MODULES := libinit_lux
 
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-6.0/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
 # Kernel
 TARGET_KERNEL_CONFIG := lux_defconfig
 BOARD_KERNEL_CMDLINE +=androidboot.selinux=permissive
