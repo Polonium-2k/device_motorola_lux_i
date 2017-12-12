@@ -21,8 +21,13 @@ TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := lux
-PRODUCT_NAME := lineage_lux
+PRODUCT_NAME := aosp_lux
 PRODUCT_MODEL := Moto X Play
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := lux
+
+# Pixel Experience required flags
+TARGET_ARCH := arm
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_DENSITY := xxhdpi
