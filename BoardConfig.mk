@@ -27,13 +27,13 @@ TARGET_INIT_VENDOR_LIB := libinit_lux
 TARGET_RECOVERY_DEVICE_MODULES := libinit_lux
 
 # Kernel Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-6.0/bin
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-7.2/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
 # Kernel
 TARGET_KERNEL_CONFIG := lux_defconfig
 BOARD_KERNEL_CMDLINE +=androidboot.selinux=permissive
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(PWD)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.9/bin/arm-eabi-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-7.2/bin
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432	# 32768 * 1024 mmcblk0p31
