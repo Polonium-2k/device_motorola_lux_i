@@ -12,3 +12,7 @@ ro.sf.lcd_denaity=320
 # Device info
 ro.build.product=lux
 ro.product.device=lux
+
+# Camera
+media.camera.ts.monotonic=1
+persist.camera.time.monotonic=1

@@ -68,3 +68,8 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/thermal-engine-lux.conf:system/etc/thermal-engine-lux.conf
+
+# CHARGER_RES
+PRODUCT_PACKAGES += \
+charger_res_images
+
