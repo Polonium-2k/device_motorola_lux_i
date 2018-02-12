@@ -1,7 +1,7 @@
 [
   {
     "remote":      "github",
-    "repository":  "innfinite4evr/device_motorola_msm8916-common",
+    "repository":  "AospExtended-Devices/device_motorola_msm8916-common",
     "target_path": "device/motorola/msm8916-common",
     "branch":      "8.1.x"
   },
