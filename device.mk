@@ -74,3 +74,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 charger_res_images
 
+
+# Sensors
+PRODUCT_PACKAGES += \
+    akmd09912 \
+    stml0xx \
+    sensors.msm8916 \
+    sensorhub.msm8916
