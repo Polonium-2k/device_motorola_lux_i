@@ -54,10 +54,9 @@ void property_override(char const prop[], char const value[])
 }
 
 void property_override_dual(char const system_prop[], char const vendor_prop[], char const value[])
-
 {
-property_override(system_prop, value);
-property_override(vendor_prop, value);
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
 }
 
 void vendor_load_properties()
@@ -81,9 +80,9 @@ void vendor_load_properties()
     if (!force_msim && (carrier == "retgb" || carrier == "reteu" || carrier == "retde" || carrier == "vfau")) {
         // These are single SIM XT1562 devices
         single_sim();
-        property_override("ro.product.device", "lux");
+        property_override_dual("ro.product.device","ro.vendor.product.device", "lux");
         property_override("ro.build.description", "lux_reteu-user 5.1.1 LPD23.118-10 15 release-keys");
-        property_override("ro.build.fingerprint", "motorola/lux_reteu/lux:5.1.1/LPD23.118-10/15:user/release-keys");
+        property_override_dual("ro.build.fingerprint","ro.vendor.build.fingerprint", "motorola/lux_reteu/lux:5.1.1/LPD23.118-10/15:user/release-keys");
         property_override("ro.build.product", "lux");
         property_set("ro.mot.build.customerid", "reteu");
         property_set("ro.gsm.data_retry_config", "default_randomization=2000,max_retries=infinite,1000,1000,80000,125000,485000,905000");
@@ -93,9 +92,9 @@ void vendor_load_properties()
     }
     else if (sku == "XT1562" || radio == "0x4") {
         dual_sim();
-        property_override("ro.product.device", "lux_uds");
+        property_override_dual("ro.product.device","ro.vendor.product.device", "lux_uds");
         property_override("ro.build.description", "lux_retasia_ds-user 5.1.1 LPD23.118-10 14 release-keys");
-        property_override("ro.build.fingerprint", "motorola/lux_retasia_ds/lux_uds:5.1.1/LPD23.118-10/14:user/release-keys");
+        property_override_dual("ro.build.fingerprint","ro.vendor.build.fingerprint", "motorola/lux_retasia_ds/lux_uds:5.1.1/LPD23.118-10/14:user/release-keys");
         property_override("ro.build.product", "lux_uds");
         property_set("ro.mot.build.customerid", "retasiaall");
         property_set("ro.gsm.data_retry_config", "default_randomization=2000,max_retries=infinite,1000,1000,80000,125000,485000,905000");
@@ -107,9 +106,9 @@ void vendor_load_properties()
              carrier == "timbr" || carrier == "retmx") {
         // These are dual SIM XT1563 devices
         dual_sim();
-        property_override("ro.product.device", "lux_uds");
+        property_override_dual("ro.product.device","ro.vendor.product.device", "lux_uds");
         property_override("ro.build.description", "lux_retla_ds-user 5.1.1 LPD23.118-6.1 2 release-keys");
-        property_override("ro.build.fingerprint", "motorola/lux_retla_ds/lux_uds:5.1.1/LPD23.118-6.1/2:user/release-keys");
+        property_override_dual("ro.build.fingerprint","ro.vendor.build.fingerprint", "motorola/lux_retla_ds/lux_uds:5.1.1/LPD23.118-6.1/2:user/release-keys");
         property_override("ro.build.product", "lux_uds");
         property_set("ro.mot.build.customerid", "retla");
         property_set("ro.gsm.data_retry_config", "default_randomization=2000,max_retries=infinite,1000,1000,80000,125000,485000,905000");
@@ -118,9 +117,9 @@ void vendor_load_properties()
     }
     else if (sku == "XT1563" || radio == "0x8") {
         single_sim();
-        property_override("ro.product.device", "lux");
+        property_override_dual("ro.product.device","ro.vendor.product.device", "lux");
         property_override("ro.build.description", "lux_retca-user 5.1.1 LPD23.118-10 19 release-keys");
-        property_override("ro.build.fingerprint", "motorola/lux_retca/lux:5.1.1/LPD23.118-10/19:user/release-keys");
+        property_override_dual("ro.build.fingerprint","ro.vendor.build.fingerprint", "motorola/lux_retca/lux:5.1.1/LPD23.118-10/19:user/release-keys");
         property_override("ro.build.product", "lux");
         property_set("ro.mot.build.customerid", "retca");
         property_set("ro.gsm.data_retry_config", "");
