@@ -1,1 +1,1 @@
-add_lunch_combo aosp_lux-userdebug
+add_lunch_combo aicp_lux-userdebug
